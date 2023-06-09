@@ -1,7 +1,6 @@
 package asnutil
 
 import (
-	"errors"
 	"net"
 )
 
@@ -16,5 +15,5 @@ type disabled struct {
 // If no mapping exists for the given IP, this function will
 // return an empty ASN and a nil error.
 func (a *disabled) AsnForIPv6(ip net.IP) (string, error) {
-	return "", errors.New("disabled")
+	return "", nil
 }
